@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Atendimento Online</title>
-  <meta name="description" content="O especialista está disponível agora para atendimento personalizado. Clique e fale agora mesmo.">
+  <title>Descubra a Solução</title>
+  <meta name="description" content="Mais de 40 mil homens já conhecem essa solução natural e eficaz. Saiba por que tantos estão aderindo!">
 
   <!-- Pixel e UTMFY -->
   <script>
@@ -68,18 +68,18 @@
       position: absolute;
       top: -6px;
       right: -6px;
-      background: #1DA1F2; /* azul estilo verificado */
+      background: #1DA1F2;
       color: white;
       border-radius: 50%;
       width: 22px;
       height: 22px;
       font-size: 13px;
       display: flex;
-      z-index: 9;
       align-items: center;
       justify-content: center;
       box-shadow: 0 0 3px rgba(0,0,0,0.3);
       font-weight: bold;
+      z-index: 9;
     }
 
     .name {
@@ -101,7 +101,7 @@
 
     p {
       font-size: 1em;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       color: #444;
     }
 
@@ -142,12 +142,70 @@
       margin-right: 8px;
     }
 
+    .comments {
+      margin-top: 40px;
+      text-align: left;
+    }
+
+    .comment {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      background: #f5f5f5;
+      border-left: 4px solid #25D366;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+    }
+
+    .comment img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .comment-content {
+      flex: 1;
+    }
+
+    .comment-content strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .note {
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #888;
+      font-style: italic;
+    }
+
+    .counter {
+      margin-top: 25px;
+      font-size: 0.95em;
+      color: #444;
+    }
+
+    .counter b {
+      color: #25D366;
+    }
+
     @keyframes pulse {
       0% { transform: scale(1); }
       50% { transform: scale(1.05); }
       100% { transform: scale(1); }
     }
   </style>
+  <script>
+    let count = Math.floor(Math.random() * 30) + 10;
+    setInterval(() => {
+      const variation = Math.floor(Math.random() * 3) - 1;
+      count = Math.max(10, count + variation);
+      const counterEl = document.getElementById("online-counter");
+      if (counterEl) counterEl.innerHTML = `<b>${count}</b> pessoas estão visualizando esta página neste momento.`;
+    }, 4000);
+  </script>
 </head>
 <body>
   <div class="box">
@@ -157,14 +215,46 @@
     </div>
     <div class="name">Dr. Silvano Oliveira</div>
     <div class="role">Especialista em saúde masculina</div>
-    <h1>Conheça agora a solução que o <strong>AMADO BATISTA</strong> disse no vídeo!</h1>
-    <p><strong>Amado Batista</strong> e mais de <strong>40 mil homens</strong> já utilizaram e aprovaram essa solução. Clique abaixo para conhecer e resolver DEFINITIVAMENTE.</p>
+    <h1>CONHEÇA AGORA A SOLUÇÃO QUE O AMADO BATISTA DISSE NO VÍDEO</h1>
+    <p><strong>Amado Batista</strong> e mais de <strong>40 mil homens</strong> já utilizaram e aprovaram essa solução. Clique abaixo para saber mais.</p>
     <a class="button" href="https://typebot.co/elxafric2">
       <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="24" height="24" alt="WhatsApp" />
-      CONHECER AGORA
+      QUERO CONHECER
     </a>
     <div class="online-status">
-      <span></span>Atendimento online
+      <span></span>Página ativa agora
+    </div>
+
+    <div id="online-counter" class="counter">
+      <b>23</b> pessoas estão visualizando esta página neste momento.
+    </div>
+
+    <div class="comments">
+      <div class="comment">
+        <img src="https://static.vecteezy.com/ti/fotos-gratis/p2/2022297-retrato-ao-ar-livre-de-um-homem-maduro-gratis-foto.jpg" alt="Marcelo T.">
+        <div class="comment-content">
+          <strong>Marcelo T. - Goiânia (GO)</strong>
+          Achei que fosse mais uma enganação, mas me surpreendi. Me ajudou de verdade.
+        </div>
+      </div>
+      <div class="comment">
+        <img src="https://media.istockphoto.com/id/1029340518/pt/foto/senior-man-smiling-at-home.jpg?s=612x612&w=0&k=20&c=aeFD9yMRXuy4zyGTcTZCKaHH7GavB4sU5wfp6vgbI4A=" alt="João C.">
+        <div class="comment-content">
+          <strong>João C. - Campinas (SP)</strong>
+          Demorei pra tomar atitude, mas ainda bem que encontrei essa solução.
+        </div>
+      </div>
+      <div class="comment">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9Y1B1ImesOwMG4e8D4109BxAk8U85UTghDw&s" alt="Eduardo M.">
+        <div class="comment-content">
+          <strong>Eduardo M. - Recife (PE)</strong>
+          Chegou direitinho e já comecei a notar diferença. Valeu cada centavo.
+        </div>
+      </div>
+    </div>
+
+    <div class="note">
+      Últimos acessos registrados há poucos minutos. Estoque limitado.
     </div>
   </div>
 </body>
