@@ -1,114 +1,170 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Página de apresentação institucional com informações e destaque de conteúdo.">
-  <title>Página de Apresentação</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atendimento Online</title>
+  <meta name="description" content="O especialista está disponível agora para atendimento personalizado. Clique e fale agora mesmo.">
 
-  <!-- Paradise Cloacker v4.0 -->
+  <!-- Pixel e UTMFY -->
   <script>
-    (function() {
-        'use strict';
-
-        const PARADISE_API_URL = 'https://cloaker.paradisepags.com//?api=validate';
-        const API_KEY = '03d1b000fb2c014a816cf9feea713153a4803fa3f6235ff38f8f4c95e5253cc9';
-        const ALLOWED_DOMAIN = ''; // deixe vazio se não quiser restringir o domínio
-
-        if (ALLOWED_DOMAIN && window.location.hostname !== ALLOWED_DOMAIN) {
-            return;
-        }
-
-        function getUrlParams() {
-            const params = new URLSearchParams(window.location.search);
-            const token = params.get('token');
-            const ref = params.get('ref');
-            return (token && ref) ? { token, ref } : null;
-        }
-
-        function validateAndRedirect(token, ref) {
-            const currentParams = new URLSearchParams(window.location.search);
-            const utmParams = new URLSearchParams();
-
-            for (const [key, value] of currentParams) {
-                if (key !== 'token' && key !== 'ref') {
-                    utmParams.append(key, value);
-                }
-            }
-
-            const formData = new FormData();
-            formData.append('token', token);
-            formData.append('ref', ref);
-            formData.append('api_key', API_KEY);
-            formData.append('utm_params', utmParams.toString());
-
-            fetch(PARADISE_API_URL, {
-                method: 'POST',
-                body: formData,
-                headers: { 'X-Requested-With': 'XMLHttpRequest' }
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success && data.redirect && data.url) {
-                    window.location.replace(data.url);
-                }
-            })
-            .catch(() => {});
-        }
-
-        const params = getUrlParams();
-        if (params) {
-            validateAndRedirect(params.token, params.ref);
-        }
-    })();
+    window.pixelId = "686850fa356bf3667a1eaf44";
+    var a = document.createElement("script");
+    a.setAttribute("async", "");
+    a.setAttribute("defer", "");
+    a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+    document.head.appendChild(a);
   </script>
+  <script
+    src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+    data-utmify-prevent-xcod-sck
+    data-utmify-prevent-subids
+    async
+    defer
+  ></script>
 
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #ffffff;
-      color: #333333;
+      background: #f2f2f2;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .box {
+      background: #fff;
+      padding: 40px 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      max-width: 500px;
+      width: 100%;
+      position: relative;
+    }
+
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 0 auto 10px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .verified {
+      position: absolute;
+      top: -6px;
+      right: -6px;
+      background: #1DA1F2; /* azul estilo verificado */
+      color: white;
+      border-radius: 50%;
+      width: 22px;
+      height: 22px;
+      font-size: 13px;
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      text-align: center;
+      box-shadow: 0 0 3px rgba(0,0,0,0.3);
+      font-weight: bold;
     }
-    .container {
-      max-width: 600px;
-      padding: 20px;
+
+    .name {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-top: 5px;
     }
+
+    .role {
+      font-size: 0.95em;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
     h1 {
-      font-size: 2em;
-      margin-bottom: 0.5em;
+      font-size: 1.6em;
+      margin-bottom: 10px;
     }
+
     p {
       font-size: 1em;
-      line-height: 1.5em;
-      color: #555555;
+      margin-bottom: 30px;
+      color: #444;
+    }
+
+    a.button {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 25px;
+      background-color: #25D366;
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+      border-radius: 8px;
+      animation: pulse 2s infinite;
+      transition: background 0.3s ease;
+    }
+
+    a.button:hover {
+      background-color: #1ebe5d;
+    }
+
+    .online-status {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #25D366;
+      font-size: 0.95em;
+    }
+
+    .online-status span {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: #25D366;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Entre Rodas, Campo e Estrada</h1>
-    <p>
-      Carro não é só meio de transporte. É extensão da alma.  
-      Do barulho do motor à lataria brilhando no sol de domingo, tudo transmite identidade.  
-      Seja rebaixado ou 4x4, o importante é sentir o comando nas mãos.
-      <br><br>
-      Clube do coração, camisa suada, nervos à flor da pele.  
-      A paixão pelo futebol vem de berço e vai até o último suspiro.  
-      Não importa a divisão ou o placar: quem ama, sente cada minuto como se fosse final de campeonato.
-      <br><br>
-      Tem quem viaje de avião.  
-      E tem quem conhece cada curva do Brasil atrás de um volante.  
-      O caminhão não leva só carga, leva história, sustento, respeito.  
-      Quem vive na estrada entende o valor do silêncio e da coragem de seguir sozinho.
-      <br><br>
-      &copy; 2025 – Todos os direitos reservados.
-    </p>
+  <div class="box">
+    <div class="avatar">
+      <img src="https://i.ibb.co/jkXCqw0D/1dc61b51-032a-454d-b5ba-a869c01185af.png" alt="Especialista">
+      <div class="verified">✓</div>
+    </div>
+    <div class="name">Dr. Silvano Oliveira</div>
+    <div class="role">Especialista em saúde masculina</div>
+    <h1>CONHEÇA AGORA A SOLUÇÃO </h1>
+    <p><strong>Amado Batista</strong> e mais de <strong>40 mil homens</strong> já utilizaram e aprovaram essa solução. Clique abaixo para conhecer e conversar com um especialista agora mesmo.</p>
+    <a class="button" href="https://typebot.co/elxafric2" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="24" height="24" alt="WhatsApp" />
+      CONHECER E PEDIR
+    </a>
+    <div class="online-status">
+      <span></span>Atendimento online
+    </div>
   </div>
 </body>
 </html>
