@@ -197,31 +197,63 @@
     }
 
     .comments {
-      margin-top: 30px;
-      text-align: left;
-    }
+  margin-top: 40px;
+  width: 100%;
+  text-align: left;
+}
 
-    .comment {
-      background: #f4f4f4;
-      border-radius: 10px;
-      padding: 15px;
-      margin-bottom: 15px;
-      display: flex;
-      gap: 10px;
-      align-items: center;
-    }
+.comments-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
 
-    .comment img {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
+.comment {
+  display: flex;
+  align-items: flex-start;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
 
-    .comment .text {
-      font-size: 0.95em;
-      color: #333;
-    }
+.comment:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+.comment img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+  border: 1px solid #ccc;
+}
+
+.comment-content {
+  flex: 1;
+}
+
+.comment-name {
+  font-weight: bold;
+  color: #385898;
+  font-size: 0.95em;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.comment-content p {
+  font-size: 0.95em;
+  color: #333;
+  margin: 0;
+}
+
 
     @keyframes pulse {
       0% { transform: scale(1); }
@@ -289,27 +321,40 @@
     <!-- Comentários e demais blocos seguem abaixo -->
 
 <div class="comments">
+  <h3 class="comments-title">Comentários recentes</h3>
+
   <div class="comment">
     <img src="https://static.vecteezy.com/ti/fotos-gratis/p2/2022297-retrato-ao-ar-livre-de-um-homem-maduro-gratis-foto.jpg" alt="Carlos - Belo Horizonte">
-    <div class="text"><strong>Carlos - Belo Horizonte:</strong> Usei por 7 dias e já percebi diferença absurda! Tô voltando a ser quem eu era com 30 anos!</div>
+    <div class="comment-content">
+      <span class="comment-name">Carlos • Belo Horizonte</span>
+      <p>Usei por 7 dias e já percebi uma diferença absurda! Tô voltando a ser quem eu era com 30 anos!</p>
+    </div>
   </div>
+
   <div class="comment">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1ndywqSCZ1va3hzWNVDrnvPv8kJqoASeBTCy-Bqca-lK33B3n7k0qnoArLvorEy2BrhM" alt="João - Recife">
-    <div class="text"><strong>João - Recife:</strong> Minha esposa me perguntou o que aconteceu. Voltamos a ter noites como no início do nosso casamento.</div>
+    <div class="comment-content">
+      <span class="comment-name">João • Recife</span>
+      <p>Minha esposa me perguntou o que aconteceu. Voltamos a ter noites como no início do casamento.</p>
+    </div>
   </div>
+
   <div class="comment">
     <img src="https://media.istockphoto.com/id/1029340518/pt/foto/senior-man-smiling-at-home.jpg?s=612x612&w=0&k=20&c=aeFD9yMRXuy4zyGTcTZCKaHH7GavB4sU5wfp6vgbI4A=" alt="José - Campinas">
-    <div class="text"><strong>José - Campinas:</strong> Achei que não tinha mais jeito, mas esse produto me surpreendeu. Já indiquei pros meus amigos.</div>
+    <div class="comment-content">
+      <span class="comment-name">José • Campinas</span>
+      <p>Achei que não tinha mais jeito, mas esse produto me surpreendeu. Já indiquei pros meus amigos.</p>
+    </div>
   </div>
+
   <div class="comment">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9Y1B1ImesOwMG4e8D4109BxAk8U85UTghDw&s" alt="Antonio - Goiânia">
-    <div class="text"><strong>Antonio - Goiânia:</strong> No começo fiquei com medo de comprar, mas agora só me arrependo de não ter comprado antes.</div>
+    <div class="comment-content">
+      <span class="comment-name">Antonio • Goiânia</span>
+      <p>No começo fiquei com receio, mas agora só me arrependo de não ter comprado antes!</p>
+    </div>
   </div>
 </div>
-
-  </div>
-</body>
-</html>
 
 
 
