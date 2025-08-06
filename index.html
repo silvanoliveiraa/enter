@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Se Você Não Fizer Isso, Vai Continuar Falhando</title>
-  <meta name="description" content="Mais de 40 mil homens já mudaram suas vidas com essa fórmula. Chegou a sua vez de virar o jogo.">
+  <title>Amado Batista Revela Solução </title>
+  <meta name="description" content="Oferta exclusiva: fórmula aprovada por Amado Batista e mais de 40 mil homens. Descubra agora mesmo.">
 
   <!-- Pixel e UTMFY -->
   <script>
@@ -32,7 +32,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       min-height: 100vh;
       text-align: center;
       padding: 20px;
@@ -40,7 +40,7 @@
 
     .box {
       background: #fff;
-      padding: 40px 20px;
+      padding: 30px 20px;
       border-radius: 12px;
       box-shadow: 0 0 25px rgba(0,0,0,0.12);
       max-width: 500px;
@@ -59,144 +59,168 @@
       animation: pulse 1.8s infinite;
     }
 
-    .avatar {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      margin: 0 auto 10px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 50%;
-    }
-
-    .verified {
-      position: absolute;
-      top: -6px;
-      right: -6px;
-      background: #1DA1F2;
-      color: white;
-      border-radius: 50%;
-      width: 22px;
-      height: 22px;
-      font-size: 13px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      box-shadow: 0 0 3px rgba(0,0,0,0.3);
-    }
-
-    .name {
-      font-size: 1.25em;
-      font-weight: bold;
-      margin-top: 5px;
-    }
-
-    .role {
-      font-size: 0.95em;
-      color: #555;
-      margin-bottom: 15px;
-    }
-
     h1 {
-      font-size: 1.8em;
-      margin-bottom: 12px;
+      font-size: 1.6em;
+      margin-bottom: 10px;
     }
 
     p {
       font-size: 1.05em;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
       color: #333;
     }
 
-    a.button {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 16px 28px;
-      background-color: #ff7a00;
-      color: white;
-      text-decoration: none;
-      font-size: 1.2em;
-      border-radius: 10px;
-      animation: pulse 2s infinite;
-      transition: background 0.3s ease;
-      font-weight: bold;
-    }
-
-    a.button:hover {
-      background-color: #e56900;
-    }
-
-    .online-status {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 12px;
-      font-weight: bold;
-      color: #25D366;
-      font-size: 0.95em;
-    }
-
-    .online-status span {
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      background-color: #25D366;
-      border-radius: 50%;
-      margin-right: 8px;
-    }
-
-    .counter {
+    .vsl-wrapper {
+      width: 100%;
       margin-top: 20px;
+      position: relative;
+    }
+
+    .vsl-wrapper img {
+      border-radius: 10px;
+    }
+
+    .offer {
+      margin-top: 30px;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      background: #fff5e6;
+      padding: 25px 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 18px rgba(0,0,0,0.1);
+      border: 2px solid #f2c94c;
+    }
+
+    .offer h2 {
+      color: #d35400;
+      font-size: 1.8em;
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+
+    .offer img.produto {
+      max-width: 300px;
+      margin: 15px 0;
+    }
+
+    .offer p {
+      font-size: 1.1em;
+      color: #000;
+    }
+
+    .preco-antigo {
+      text-decoration: line-through;
+      color: red;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    .preco-novo {
+      color: green;
+      font-size: 2em;
+      font-weight: bold;
+      display: block;
+      margin-top: 5px;
+    }
+
+    .unitario {
+      font-size: 1.3em;
+      font-weight: bold;
+      margin: 12px 0;
+      color: #1a1a1a;
+    }
+
+    .garantia {
+      font-size: 0.95em;
+      color: #000;
+      background: #e0ffe3;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .anvisa {
+      font-size: 0.95em;
+      color: #2c7;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .selos {
+      width: 100%;
+      max-width: 400px;
+      margin: 15px 0;
+    }
+
+    .offer a {
+      display: inline-block;
+      background: #25D366;
+      color: #fff;
+      padding: 18px 35px;
+      font-weight: bold;
+      font-size: 1.3em;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 15px;
+      animation: pulseBtn 2s infinite;
+      box-shadow: 0 0 15px rgba(37, 211, 102, 0.6);
+    }
+
+    @keyframes pulseBtn {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); box-shadow: 0 0 20px rgba(37, 211, 102, 0.9); }
+      100% { transform: scale(1); }
+    }
+
+    .online-status, .counter {
+      margin-top: 12px;
+      font-size: 0.95em;
+      color: #25D366;
+      font-weight: bold;
+    }
+
+    .bio {
+      margin-top: 40px;
       font-size: 0.95em;
       color: #444;
+      background: #eef6f7;
+      padding: 20px;
+      border-radius: 10px;
     }
 
-    .counter b {
-      color: #25D366;
-    }
-
-    .note {
-      margin-top: 30px;
-      font-size: 0.9em;
-      color: #888;
-      font-style: italic;
+    .bio img {
+      width: 90px;
+      border-radius: 50%;
+      margin-top: 10px;
     }
 
     .comments {
-      margin-top: 40px;
+      margin-top: 30px;
       text-align: left;
     }
 
     .comment {
+      background: #f4f4f4;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 15px;
       display: flex;
-      gap: 15px;
-      margin-bottom: 25px;
-      align-items: flex-start;
+      gap: 10px;
+      align-items: center;
     }
 
     .comment img {
-      width: 48px;
-      height: 48px;
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
+      object-fit: cover;
     }
 
-    .comment-text {
-      background: #f1f1f1;
-      padding: 10px 14px;
-      border-radius: 8px;
-    }
-
-    .comment-text strong {
-      display: block;
-      margin-bottom: 4px;
+    .comment .text {
+      font-size: 0.95em;
+      color: #333;
     }
 
     @keyframes pulse {
@@ -206,6 +230,20 @@
     }
   </style>
   <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        const script = document.createElement('script');
+        script.src = "https://scripts.converteai.net/5b4167e5-ea71-4f3b-bdee-e84d25d6eea5/players/688a936c5f2b9a931b6659cd/player.js";
+        script.async = true;
+        document.head.appendChild(script);
+      }, 4000);
+
+      setTimeout(() => {
+        const offer = document.querySelector('.offer');
+        if (offer) offer.style.display = 'flex';
+      }, 100000);
+    });
+
     let count = Math.floor(Math.random() * 30) + 10;
     setInterval(() => {
       const variation = Math.floor(Math.random() * 3) - 1;
@@ -218,52 +256,60 @@
 <body>
   <div class="box">
     <div class="urgency">⏳ Últimas unidades! Quem deixar pra depois, vai se arrepender. ⏳</div>
-    <div class="avatar">
-      <img src="https://i.ibb.co/jkXCqw0D/1dc61b51-032a-454d-b5ba-a869c01185af.png" alt="Especialista">
-      <div class="verified">✓</div>
+    <h1>🚨 Amado Batista revelou: isso está mudando a vida dos homens</h1>
+    <p>Mais de 40 mil homens já mudaram de vida com essa fórmula. Veja por que o <strong>Amado Batista</strong> indicou essa solução que está fazendo barulho.</p>
+
+    <div class="vsl-wrapper">
+      <div id="vid_688a936c5f2b9a931b6659cd" style="position: relative; width: 100%; padding: 133.3333% 0 0;">
+        <img id="thumb_688a936c5f2b9a931b6659cd" src="https://i.ibb.co/LddB1p2j/Chat-GPT-Image-6-de-ago-de-2025-07-58-20.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 10px;" alt="thumbnail">
+        <div id="backdrop_688a936c5f2b9a931b6659cd" style="-webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); position: absolute; top: 0; height: 100%; width: 100%; border-radius: 10px;"></div>
+      </div>
     </div>
-    <div class="name">Dr. Silvano Oliveira</div>
-    <div class="role">Especialista em saúde masculina</div>
-    <h1>🚨 CONHEÇA A SOLUÇÃO QUE O AMADO BASTISTA FALOU NO VÍDEO</h1>
-    <p><strong>Amado Batista</strong> falou em vídeo. Milhares já provaram. Se você ignorar isso, o problema vai continuar te controlando.</p>
-    <a class="button" href="https://typebot.co/elxafric2">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="24" height="24" alt="WhatsApp" />
-      QUERO RESULTADO AGORA
-    </a>
+
+<img src="https://i.ibb.co/CpP5jBB8/IMG-3162.jpg" alt="Amado Batista depoimento" style="width: 100%; border-radius: 10px; margin-bottom: 20px;">
+
     <div class="online-status">
-      <span></span>Alta atividade agora
+      <span></span>Alta volume de venda neste momento
     </div>
     <div id="online-counter" class="counter">
       <b>28</b> homens estão acessando agora e tomando a decisão certa.
     </div>
-    <div class="note">
-      Se você fechar essa página agora, não espere que nada mude. Você decide.
+
+    <div class="offer">
+      <h2>🔥 OFERTA ESPECIAL:<br>Leve 3 e Pague 2 🔥</h2>
+      <img src="https://i.ibb.co/y1z0Sr3/3.png" alt="Produto" class="produto">
+      <p><span class="preco-antigo">De R$178</span> <br><span class="preco-novo">R$68,90</span> hoje</p>
+      <div class="unitario">Nesta oferta, <strong>cada unidade sai por apenas R$22,96</strong></div>
+      <div class="garantia">Resultado garantido ou <u>O DOBRO</u> do seu dinheiro de volta</div>
+      <div class="anvisa">✅ Aprovado pela Anvisa</div>
+      <img src="https://a7ma.com.br/wp-content/uploads/2022/07/selo-garantia-768x205-1.png" alt="Selos" class="selos">
+      <a href="https://pagamento.exemplo.com/checkout-2plus1">QUERO OS 3 FRASCOS POR R$68,90</a>
     </div>
 
-    <div class="comments">
-      <div class="comment">
-        <img src="https://static.vecteezy.com/ti/fotos-gratis/p2/2022297-retrato-ao-ar-livre-de-um-homem-maduro-gratis-foto.jpg" alt="Comentário 1">
-        <div class="comment-text">
-          <strong>José Mauro</strong>
-          Cara, eu tava totalmente cético. Hoje agradeço por ter clicado nesse link.
-        </div>
-      </div>
-      <div class="comment">
-        <img src="https://media.istockphoto.com/id/1029340518/pt/foto/senior-man-smiling-at-home.jpg?s=612x612&w=0&k=20&c=aeFD9yMRXuy4zyGTcTZCKaHH7GavB4sU5wfp6vgbI4A=" alt="Comentário 2">
-        <div class="comment-text">
-          <strong>Luiz Roberto</strong>
-          Tô com 63 anos e posso garantir... isso aqui me devolveu a confiança!
-        </div>
-      </div>
-      <div class="comment">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9Y1B1ImesOwMG4e8D4109BxAk8U85UTghDw&s" alt="Comentário 3">
-        <div class="comment-text">
-          <strong>Renato Silva</strong>
-          Usei por 7 dias e já senti diferença. Não esperava esse resultado tão rápido.
-        </div>
-      </div>
-    </div>
+    <!-- Comentários e demais blocos seguem abaixo -->
+
+<div class="comments">
+  <div class="comment">
+    <img src="https://static.vecteezy.com/ti/fotos-gratis/p2/2022297-retrato-ao-ar-livre-de-um-homem-maduro-gratis-foto.jpg" alt="Carlos - Belo Horizonte">
+    <div class="text"><strong>Carlos - Belo Horizonte:</strong> Usei por 7 dias e já percebi diferença absurda! Tô voltando a ser quem eu era com 30 anos!</div>
+  </div>
+  <div class="comment">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1ndywqSCZ1va3hzWNVDrnvPv8kJqoASeBTCy-Bqca-lK33B3n7k0qnoArLvorEy2BrhM" alt="João - Recife">
+    <div class="text"><strong>João - Recife:</strong> Minha esposa me perguntou o que aconteceu. Voltamos a ter noites como no início do nosso casamento.</div>
+  </div>
+  <div class="comment">
+    <img src="https://media.istockphoto.com/id/1029340518/pt/foto/senior-man-smiling-at-home.jpg?s=612x612&w=0&k=20&c=aeFD9yMRXuy4zyGTcTZCKaHH7GavB4sU5wfp6vgbI4A=" alt="José - Campinas">
+    <div class="text"><strong>José - Campinas:</strong> Achei que não tinha mais jeito, mas esse produto me surpreendeu. Já indiquei pros meus amigos.</div>
+  </div>
+  <div class="comment">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9Y1B1ImesOwMG4e8D4109BxAk8U85UTghDw&s" alt="Antonio - Goiânia">
+    <div class="text"><strong>Antonio - Goiânia:</strong> No começo fiquei com medo de comprar, mas agora só me arrependo de não ter comprado antes.</div>
+  </div>
+</div>
 
   </div>
 </body>
 </html>
+
+
+
